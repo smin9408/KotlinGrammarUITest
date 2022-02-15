@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
 
             if (id == inputId && password == inputPs) {
                 Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
-            } else if (id == inputId) {
-                Toast.makeText(this, "비밀번호가 틀렸습니다", Toast.LENGTH_SHORT).show()
-            } else if (password == inputPs) {
+            } else if (id != inputId) {
                 Toast.makeText(this, "아이디가 틀렸습니다", Toast.LENGTH_SHORT).show()
+            } else if (password != inputPs) {
+                Toast.makeText(this, "비밀번호가 틀렸습니다", Toast.LENGTH_SHORT).show()
             } else{
                 Toast.makeText(this, "로그인에 실패했습니다", Toast.LENGTH_SHORT).show()
             }
